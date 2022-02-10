@@ -4,7 +4,7 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 export default function({item, navigation}) {
     return <View key={item.key} style={styleSheet.gridbox}>
               <TouchableOpacity 
-                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description})}>
+                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description, imageUrl: item.imageUrl})}>
                     <View>
                       <Text>
                         {item.name}
