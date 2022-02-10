@@ -9,13 +9,24 @@ const AboutScreen = ({ navigation }) => {
                 <Button onPress={() => navigation.navigate('Home')} title="go">
                 </Button>
                 <View>
-                    <Text>Price: xx kr</Text>
-                    <Text>Description: here comes the description, it can be quite long and must be handled as a long text</Text>
+                    <Text style={styles.titleText}>About</Text>
+                    <Text style={styles.baseText}>{"\n"}Saplify is an app to buy and sell Saplings easily. It's focus is on providing an online marketplace and letting people create offers and let buyers contact them.{"\n"}{"\n"}</Text>
+                    <Text style={styles.baseText}>Made by AppDevTeam / Group 7 as project in Developing Mobile Applications</Text>
                     <StatusBar style="auto" />
                 </View>
             </View>
         );
 }
+
+const styles = StyleSheet.create({
+    baseText: {
+      
+    },
+    titleText: {
+      fontSize: 20,
+      fontWeight: "bold"
+    }
+  });
 
 export default AboutScreen;
 
