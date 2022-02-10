@@ -1,16 +1,17 @@
 import * as React from 'react';
-import { Text, View, Image, StyleSheet, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function({item, navigation}) {
-    return <View key={item.key} style={StyleSheet.gridbox}>
+    return <View key={item.key} style={styleSheet.gridbox}>
               <TouchableOpacity 
-                  onPress={() => navigation.navigate('DetailedView')}>
+                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description})}>
                     <View>
                       <Text>
                         {item.name}
                       </Text>  
                       <Image
                         source={item.imageUrl}
+                        style={styleSheet.image}
                       >
                       </Image> 
                     </View>
@@ -22,12 +23,17 @@ const styleSheet = StyleSheet.create({
  
   gridbox: {
     flex: 1,
-    width: 7,
-    height: 75,
+    width: "100%",
+    //height: 7,
     margin: 2,
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#9F7E69',
+    //justifyContent: 'center',
+    //alignItems: 'center',
     textAlign: "center"
+  },
+
+  image: {
+    width: "100%",
+    //height: "100%"
   }
 });

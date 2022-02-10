@@ -2,14 +2,14 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Text, View, Button } from 'react-native';
 
-const DetailedAboutScreen = ({ navigation }) => {
+const DetailedAboutScreen = ({ route, navigation }) => {
         return (
             <View>
                 <Button onPress={() => navigation.navigate('Home')} title="go">
                 </Button>
                 <View>
-                    <Text>Price: xx kr</Text>
-                    <Text>Description: here comes the description, it can be quite long and must be handled as a long text</Text>
+                    <Text>Price: {route.params.price}kr</Text>
+                    <Text>Description: {route.params.description}</Text>
                     <StatusBar style="auto" />
                 </View>
             </View>

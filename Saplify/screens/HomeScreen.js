@@ -4,13 +4,13 @@ import { StyleSheet, TextInput, View, SafeAreaView, FlatList} from 'react-native
 import PlantsList from '../components/PlantsList';
 
 const plantData = [
-  {key: '1', name: 'sapling',imageUrl: require('../assets/images/sap1.png')},
-  {key: '2', name: 'flower', imageUrl: require('../assets/images/sap2.png')},
-  {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
-  {key: '4', name: 'carrot', imageUrl: require('../assets/images/sap1.png')},
-  {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
-  {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
-  {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
+  {key: '1', name: 'sapling', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "New Sapling"},
+  {key: '2', name: 'flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer"},
+  {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1"},
+  {key: '4', name: 'carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot."},
+  {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "2"},
+  {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "3"},
+  {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4"}
 ]
 
 const HomeScreen = ({ navigation }) => {
