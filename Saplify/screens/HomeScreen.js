@@ -1,11 +1,46 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button} from 'react-native';
+import { StyleSheet, Text, View, Image, Button, FlatList} from 'react-native';
 
-export default class HomeScreen extends React.Component {
+import PlantsList from '../components/PlantsList';
+
+const HomeScreen = ({ navigation }) => {
+  return (
+        <View style={styles.container}> 
+          <FlatList
+                    data={[
+                      {key: '1', name: 'sap',imageUrl: require('../assets/images/sap1.png')},
+                      {key: '2', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
+                      {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
+                      {key: '4', name: 'sap', imageUrl: require('../assets/images/sap1.png')},
+                      {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
+                      {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
+                      {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
+                    ]}
+                    renderItem={({item}) => PlantsList({item, navigation})}
+          />  
+        </View>
+  );
+};
+
+export default HomeScreen;
+
+/* export default class HomeScreen extends React.Component {
     render() {
         return (
-            <View style={styles.container}>        
+            <View style={styles.container}>  
+              <FlatList
+                data={[
+                  {key: '1', name: 'sap',imageUrl: require('../assets/images/sap1.png')},
+                  {key: '2', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
+                  {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
+                  {key: '4', name: 'sap', imageUrl: require('../assets/images/sap1.png')},
+                  {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
+                  {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
+                  {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
+                ]}
+                renderItem={({item}) => PlantsList({item, props})}
+              />      
               <View style={styles.boxImage}>
                 <Image
                 source={require('../assets/images/sap1.png')}
@@ -32,7 +67,7 @@ export default class HomeScreen extends React.Component {
             </View>
           );
     }
-}
+} */
 
 const styles = StyleSheet.create({
   container: {
