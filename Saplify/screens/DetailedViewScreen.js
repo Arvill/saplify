@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { Text, View, Button } from 'react-native';
 
 const DetailedAboutScreen = ({ navigation }) => {
         return (
             <View>
-
                 <Button onPress={() => navigation.navigate('Home')} title="go">
                 </Button>
                 <View>

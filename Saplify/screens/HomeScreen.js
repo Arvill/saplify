@@ -1,87 +1,55 @@
 import * as React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button, FlatList} from 'react-native';
+import { StyleSheet, TextInput, View, SafeAreaView, FlatList} from 'react-native';
 
 import PlantsList from '../components/PlantsList';
 
+const plantData = [
+  {key: '1', name: 'sapling',imageUrl: require('../assets/images/sap1.png')},
+  {key: '2', name: 'flower', imageUrl: require('../assets/images/sap2.png')},
+  {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
+  {key: '4', name: 'carrot', imageUrl: require('../assets/images/sap1.png')},
+  {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
+  {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
+  {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
+]
+
 const HomeScreen = ({ navigation }) => {
+  const [text, setText] = React.useState("");
+  const [data, setData] = React.useState(plantData);
+  
   return (
+      <SafeAreaView>
         <View style={styles.container}> 
+          <TextInput 
+            style={styles.input}
+            onChangeText={(t) => {
+                                    setText(t);            
+                                    setData(plantData.filter((item) => (item.name.includes(t.toLowerCase()))))
+                                  }
+                          }
+            value={text}
+            placeholder="Search for a plant"
+          />
           <FlatList
-                    data={[
-                      {key: '1', name: 'sap',imageUrl: require('../assets/images/sap1.png')},
-                      {key: '2', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
-                      {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
-                      {key: '4', name: 'sap', imageUrl: require('../assets/images/sap1.png')},
-                      {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
-                      {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
-                      {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
-                    ]}
-                    keyExtractor={item => item.id}
+                    data={data}
+                    keyExtractor={item => item.key}
                     numColumns={2}
-                    key={item => item.id}
-                    renderItem={({item}) => PlantsList({item, navigation})}
+                    key={item => item.key}
+                    renderItem={({item}) => PlantsList({item, navigation, text})}
           />  
         </View>
+      </SafeAreaView>
   );
 };
 
 export default HomeScreen;
 
-/* export default class HomeScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>  
-              <FlatList
-                data={[
-                  {key: '1', name: 'sap',imageUrl: require('../assets/images/sap1.png')},
-                  {key: '2', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
-                  {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
-                  {key: '4', name: 'sap', imageUrl: require('../assets/images/sap1.png')},
-                  {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png')},
-                  {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
-                  {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
-                ]}
-                renderItem={({item}) => PlantsList({item, props})}
-              />      
-              <View style={styles.boxImage}>
-                <Image
-                source={require('../assets/images/sap1.png')}
-                style={styles.image}
-                />     
-              </View>
-              <View style={styles.boxText}>
-              <Button
-                  title="About"
-                  onPress={() => this.props.navigation.navigate('About')}
-                />
-                                <Button
-                  title="NewItem"
-                  onPress={() => this.props.navigation.navigate('NewItem')}
-                /> 
-                                <Button
-                  title="DetailedView"
-                  onPress={() => this.props.navigation.navigate('DetailedView')}
-                />    
-                <Text>Price: xx kr</Text>
-                <Text>Description: here comes the description, it can be quite long and must be handled as a long text</Text>
-                <StatusBar style="auto" />
-              </View>              
-            </View>
-          );
-    }
-} */
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#4B644A'
   },
   image: {
-    width: '100%',
+    width: '50vw',
     height: '100%'
   },
   boxImage: {
@@ -89,5 +57,8 @@ const styles = StyleSheet.create({
   },
   boxText: {
     flex: 2
+  },
+  input: {
+    backgroundColor: "#FFEEE2"
   }
 });
