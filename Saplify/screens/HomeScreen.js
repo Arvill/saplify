@@ -17,6 +17,9 @@ const HomeScreen = ({ navigation }) => {
                       {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png')},
                       {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png')}
                     ]}
+                    keyExtractor={item => item.id}
+                    numColumns={2}
+                    key={item => item.id}
                     renderItem={({item}) => PlantsList({item, navigation})}
           />  
         </View>

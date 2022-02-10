@@ -2,13 +2,11 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
-export default class AboutScreen extends React.Component {
-
-    render() {
+const AboutScreen = ({ navigation }) => {
         return (
             <View>
 
-                <Button onPress={() => this.props.navigation.navigate('Home')} title="go">
+                <Button onPress={() => navigation.navigate('Home')} title="go">
                 </Button>
                 <View>
                     <Text>Price: xx kr</Text>
@@ -17,6 +15,7 @@ export default class AboutScreen extends React.Component {
                 </View>
             </View>
         );
-    }
 }
+
+export default AboutScreen;
 
