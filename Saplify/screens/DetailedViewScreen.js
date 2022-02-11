@@ -9,8 +9,8 @@ const DetailedAboutScreen = ({ route, navigation }) => {
                 <View>
                     <Image
                         source={route.params.imageUrl}
-                      >
-                      </Image> 
+                    >
+                    </Image> 
                     <Text>Price: {route.params.price}kr</Text>
                     <Text>Description: {route.params.description}</Text>
                 </View>

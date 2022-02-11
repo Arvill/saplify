@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TextInput, View, SafeAreaView, FlatList} from 'react-native';
+import { StyleSheet, TextInput, Text, View, SafeAreaView, FlatList} from 'react-native';
 
 import PlantsList from '../components/PlantsList';
 
@@ -36,6 +36,7 @@ const HomeScreen = ({ navigation }) => {
                     numColumns={2}
                     key={item => item.key}
                     renderItem={({item}) => PlantsList({item, navigation, text})}
+                    ItemSeparatorComponent={() => <View style={{height: 10}}></View>}
           />  
         </View>
       </SafeAreaView>
