@@ -4,8 +4,6 @@ import { Text, View, Button, Image } from 'react-native';
 const DetailedAboutScreen = ({ route, navigation }) => {
         return (
             <View>
-                {/* <Button onPress={() => navigation.navigate('Home')} title="Go back">
-                </Button> */}
                 <View>
                     <Image
                         source={route.params.imageUrl}
@@ -13,6 +11,7 @@ const DetailedAboutScreen = ({ route, navigation }) => {
                     </Image> 
                     <Text>Price: {route.params.price}kr</Text>
                     <Text>Description: {route.params.description}</Text>
+                    <Button onPress={() => navigation.navigate('Home')} title="Back"></Button>
                 </View>
             </View>
         );
