@@ -3,24 +3,24 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function({item, navigation}) {
     return <View key={item.key} style={styleSheet.gridbox}>
-              <TouchableOpacity 
-                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description, imageUrl: item.imageUrl})}>
+              <TouchableOpacity
+                  onPress={() => navigation.navigate('DetailedView', {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name})}>
                     <View>
                       <Text>
                         {item.name}
-                      </Text>  
+                      </Text>
                       <Image
                         source={item.imageUrl}
                         style={styleSheet.image}
                       >
-                      </Image> 
+                      </Image>
                     </View>
               </TouchableOpacity>
-           </View>    
+           </View>
 }
 
 const styleSheet = StyleSheet.create({
- 
+
   gridbox: {
     flex: 1,
     width: "100%",
