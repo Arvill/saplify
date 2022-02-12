@@ -4,7 +4,7 @@ import { StyleSheet, TextInput, Text, View, SafeAreaView, FlatList} from 'react-
 import PlantsList from '../components/PlantsList';
 
 const plantData = [
-  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap1.png'), price: "trade", description: "New Sapling"},
+  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling"},
   {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer"},
   {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1"},
   {key: '4', name: 'Carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot."},
@@ -55,9 +55,10 @@ const styles = StyleSheet.create({
   },
   boxImage: {
     flex: 2,
+
   },
   boxText: {
-    flex: 2
+    flex: 2,
   },
   input: {
     backgroundColor: "#FFEEE2"
