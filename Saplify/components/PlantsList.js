@@ -5,7 +5,7 @@ export default function({item, navigation}) {
 
     return <View key={item.key} >
               <TouchableOpacity
-                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description, imageUrl: item.imageUrl})} style={styleSheet.gridbox}>
+                  onPress={() => navigation.navigate('DetailedView', {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name})} style={styleSheet.gridbox}>
                     <View style={styleSheet.imagebox}>
 
                       <Image
@@ -17,7 +17,7 @@ export default function({item, navigation}) {
                   <View style={styleSheet.textbox}>
                       <View style={styleSheet.titletbox}>
                           <Text style = {styleSheet.title}>
-                              {item.description}
+                              {item.name}
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
