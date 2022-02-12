@@ -3,37 +3,37 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function({item, navigation}) {
     return <View key={item.key} style={styleSheet.gridbox}>
-              <TouchableOpacity 
-                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description, imageUrl: item.imageUrl})}>
+              <TouchableOpacity
+                  onPress={() => navigation.navigate('DetailedView', {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name})}>
                     <View>
                       <Text>
                         {item.name}
-                      </Text>  
+                      </Text>
                       <Image
                         source={item.imageUrl}
                         style={styleSheet.image}
                       >
-                      </Image> 
+                      </Image>
                     </View>
               </TouchableOpacity>
-           </View>    
+           </View>
 }
 
 const styleSheet = StyleSheet.create({
- 
+
   gridbox: {
     flex: 1,
     width: "100%",
-    //height: 7,
     margin: 2,
     backgroundColor: '#9F7E69',
     //justifyContent: 'center',
     //alignItems: 'center',
-    textAlign: "center"
+    textAlign: "center",
   },
 
   image: {
     width: "100%",
-    //height: "100%"
+    resizeMode: "contain",
+    height: 175
   }
 });
