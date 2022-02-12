@@ -24,16 +24,16 @@ const styleSheet = StyleSheet.create({
   gridbox: {
     flex: 1,
     width: "100%",
-    //height: 7,
     margin: 2,
     backgroundColor: '#9F7E69',
     //justifyContent: 'center',
     //alignItems: 'center',
-    textAlign: "center"
+    textAlign: "center",
   },
 
   image: {
     width: "100%",
-    //height: "100%"
+    resizeMode: "contain",
+    height: 175
   }
 });
