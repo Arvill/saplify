@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button , Pressable, Linking  } from 'react-native';
-import styles from "./assets/StyleSheet.js";
+import {styles} from "../assets/StyleSheet.js";
 
 const AboutScreen = ({ navigation }) => {
         return (
             <View style={styles.container}>
                   <Text style={styles.title}>About us</Text>
-                  <View style={styles.about_box}>
-                    <Text style={styles.about_desc}>{"\n"}
+                  <View style={styles.aboutBox}>
+                    <Text style={styles.aboutDesc}>{"\n"}
                     Saplify is an app to buy and sell Saplings easily. It's focus is on providing an online marketplace and letting people create offers and let buyers contact them.{"\n"}{"\n"}
                     Made by Group 7 as a project in{"\ "}
                     <Text style={{color:"blue"}} onPress={()=> Linking.openURL("https://www.kth.se/student/kurser/kurs/ID2216")}>
@@ -23,9 +23,9 @@ const AboutScreen = ({ navigation }) => {
                     </Text>
                     <StatusBar style="auto" />
                 </View>
-                <View style={styles.invisible_box}></View>
-                <Pressable onPress={() => navigation.navigate('Home')} style={styles.back_button}>
-                  <Text style={styles.text_button}>Back</Text>
+                <View style={styles.invisibleBox}></View>
+                <Pressable onPress={() => navigation.navigate('Home')} style={styles.backButton}>
+                  <Text style={styles.textButton}>Back</Text>
                 </Pressable>
             </View>
         );

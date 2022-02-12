@@ -7,6 +7,10 @@ export const styles = StyleSheet.create({
       padding: 16,
       backgroundColor: "#4B7156",
    },
+   mainContainer: {
+     padding: 16,
+     backgroundColor: "#4B7156",
+   },
    title: {
     marginBottom: 24,
     paddingVertical: 8,
@@ -21,7 +25,7 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: 22,
     textAlign: "center"
   },
-  about_box: {
+  aboutBox: {
     backgroundColor: "#E6E6EF",
     alignItems: "center",
     borderBottomLeftRadius: 22,
@@ -29,7 +33,7 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 22,
     borderTopRightRadius: 22,
   },
-  about_desc: {
+  aboutDesc: {
     backgroundColor: "#C4C4C4",
     paddingHorizontal: 10,
     paddingBottom: 30,
@@ -40,7 +44,7 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 22,
     borderTopRightRadius: 22,
   },
-  back_button: {
+  backButton: {
     borderBottomLeftRadius: 22,
     borderBottomRightRadius: 22,
     borderTopLeftRadius: 22,
@@ -50,20 +54,20 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 16,
   },
-  invisible_box: {
+  invisibleBox: {
     flex: 1,
   },
-  text_button: {
+  textButton: {
     paddingHorizontal: 15,
     textAlign: "center",
   },
-  plant_box: {
+  plantBox: {
     backgroundColor: "#E6E6EF",
     alignItems: "center",
     borderTopLeftRadius: 22,
     borderTopRightRadius: 22,
   },
-  plant_desc: {
+  plantDesc: {
     backgroundColor: "#C4C4C4",
     borderBottomLeftRadius: 22,
     borderBottomRightRadius: 22,
@@ -74,5 +78,25 @@ export const styles = StyleSheet.create({
   plant_image: {
     resizeMode: "contain",
     height: 300
+  },
+  image: {
+    width: '50vw',
+    height: '100%'
+  },
+  boxImage: {
+    flex: 2,
+  },
+  boxText: {
+    flex: 2,
+  },
+  searchInput: {
+    backgroundColor: "#FFEEE2",
+    borderBottomLeftRadius: 22,
+    borderBottomRightRadius: 22,
+    borderTopLeftRadius: 22,
+    borderTopRightRadius: 22,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    marginBottom: 10,
   },
   });

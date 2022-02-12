@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, TextInput, Text, View, SafeAreaView, FlatList} from 'react-native';
+import {styles} from "../assets/StyleSheet.js";
 
 import PlantsList from '../components/PlantsList';
 
@@ -19,9 +20,9 @@ const HomeScreen = ({ navigation }) => {
 
   return (
       <SafeAreaView>
-        <View style={styles.container}>
+        <View style={styles.mainContainer}>
           <TextInput
-            style={styles.input}
+            style={styles.searchInput}
             onChangeText={(t) => {
                                     setText(t);
                                     setData(plantData.filter((item) => (item.name.includes(t.toLowerCase()))))
@@ -44,23 +45,3 @@ const HomeScreen = ({ navigation }) => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#4B644A'
-  },
-  image: {
-    width: '50vw',
-    height: '100%'
-  },
-  boxImage: {
-    flex: 2,
-
-  },
-  boxText: {
-    flex: 2,
-  },
-  input: {
-    backgroundColor: "#FFEEE2"
-  }
-});
