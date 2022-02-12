@@ -33,7 +33,7 @@ const HomeScreen = ({ navigation }) => {
           <FlatList
                     data={data}
                     keyExtractor={item => item.key}
-                    numColumns={2}
+                    numColumns={1}
                     key={item => item.key}
                     renderItem={({item}) => PlantsList({item, navigation, text})}
                     ItemSeparatorComponent={() => <View style={{height: 10}}></View>}
