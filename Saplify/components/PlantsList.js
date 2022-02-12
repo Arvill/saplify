@@ -36,19 +36,19 @@ const styleSheet = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     width: "100%",
-    height: "50%",
-
-    margin: 2,
     borderRadius: 15,
     backgroundColor: '#9F7E69',
     //justifyContent: 'center',
     //alignItems: 'center',
-    textAlign: "center",
+
   },
 
   imagebox: {
-        flex: 0.7,
-
+    flex: 1,
+      top:0,
+      bottom:0,
+        width: "50%",
+      height: "100%"
   },
   textbox: {
         flex: 1,
@@ -70,11 +70,11 @@ const styleSheet = StyleSheet.create({
         flex: 1,
   },
   image: {
-      flex: 1,
-    width: "100%",
+      width: "100%",
       borderBottomLeftRadius: 15,
       borderTopLeftRadius: 15,
-    //height: "100%"
+
+      height: 175
 
   }
 });
