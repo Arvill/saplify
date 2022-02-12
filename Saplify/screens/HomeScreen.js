@@ -4,26 +4,26 @@ import { StyleSheet, TextInput, Text, View, SafeAreaView, FlatList} from 'react-
 import PlantsList from '../components/PlantsList';
 
 const plantData = [
-  {key: '1', name: 'sapling', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "New Sapling"},
-  {key: '2', name: 'flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer"},
-  {key: '3', name: 'sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1"},
-  {key: '4', name: 'carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot."},
-  {key: '5', name: 'sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "2"},
-  {key: '6', name: 'sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "3"},
-  {key: '7', name: 'sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4"}
+  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap1.png'), price: "trade", description: "New Sapling"},
+  {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer"},
+  {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1"},
+  {key: '4', name: 'Carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot."},
+  {key: '5', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "2"},
+  {key: '6', name: 'Sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "3"},
+  {key: '7', name: 'Sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4"}
 ]
 
 const HomeScreen = ({ navigation }) => {
   const [text, setText] = React.useState("");
   const [data, setData] = React.useState(plantData);
-  
+
   return (
       <SafeAreaView>
-        <View style={styles.container}> 
-          <TextInput 
+        <View style={styles.container}>
+          <TextInput
             style={styles.input}
             onChangeText={(t) => {
-                                    setText(t);            
+                                    setText(t);
                                     setData(plantData.filter((item) => (item.name.includes(t.toLowerCase()))))
                                   }
                           }
@@ -37,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
                     key={item => item.key}
                     renderItem={({item}) => PlantsList({item, navigation, text})}
                     ItemSeparatorComponent={() => <View style={{height: 10}}></View>}
-          />  
+          />
         </View>
       </SafeAreaView>
   );
