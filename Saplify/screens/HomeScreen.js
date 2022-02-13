@@ -8,11 +8,11 @@ const plantData = [
 
   {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling from my something-plant (I have no idea, see image). Trade for any sturdy plant.", contact: "+46735448218"},
   {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Selling my only plant as I realised they spread 5g", contact: "+46735448218"},
-  {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "I don't want to write a description", contact: "+46735448218"},
-  {key: '4', name: 'Carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot.", contact: "+46735448218"},
-  {key: '5', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "A plant cutting", contact: "+46735448218"},
-  {key: '6', name: 'Sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "我是非常累", contact: "+46735448218"},
-  {key: '7', name: 'Sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4", contact: "+46735448218"}
+  {key: '3', name: 'Beautiful sapling', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "I have a big plant and I can give some saplings for 20kr.", contact: "+46735448218"},
+  {key: '4', name: 'Phyllostachys aurera', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Amazing Phyllostachys aurera easy to care of in an apartment.", contact: "+46735448218"},
+  {key: '5', name: 'Ficus', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "A nice ficus cutting for only 15kr. Contact me asap!", contact: "+46735448218"},
+  {key: '6', name: 'Spear plant', imageUrl: require('../assets/images/sap2.png'), price: 30, description: "我是非常累", contact: "+46735448218"},
+  {key: '7', name: 'Calathea "White Fusion"', imageUrl: require('../assets/images/sap1.png'), price: 45, description: "My calathea 'White Fusion' I bought 5 years ago is so big, I sell some cuttings of it :)", contact: "+46735448218"}
 
 ]
 

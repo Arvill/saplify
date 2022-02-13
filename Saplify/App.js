@@ -18,7 +18,7 @@ function App() {
           <Drawer.Navigator initialRouteName="HomeStack">
             <Drawer.Screen name="HomeStack" options={{
                 headerTitle: () => (<Image style = {{ height: "70%", alignSelf: "center", resizeMode: "contain", marginRight:50}} source={require('./assets/images/logo-w.png')} />),
-                title: "home",
+                title: "Home",
                 headerStyle: {
                     backgroundColor: '#9CD353',
                 },
@@ -41,7 +41,7 @@ function App() {
                           <Text>My Search Bar</Text>
                       )}}  */
                          />
-            <Drawer.Screen name="NewItem" component={NewItemScreen} />
+            <Drawer.Screen name="NewItem" component={NewItemScreen} options={{title: "Add a new plant"}}/>
           </Drawer.Navigator>
         </NavigationContainer>
   );
