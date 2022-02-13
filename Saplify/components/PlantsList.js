@@ -18,18 +18,24 @@ export default function({item, navigation}) {
                     </View>
                   <View style={styleSheet.textbox}>
                       <View style={styleSheet.titletbox}>
-                          <Text style = {styleSheet.title}>
+                          <Text numberOfLines={2} style = {styleSheet.title}>
                               {item.name}
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
-                          <Text style = {styleSheet.description}>
+                          <Text numberOfLines={2} style = {styleSheet.description}>
                               Price: {item.price}:-
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
-                          <Text style = {styleSheet.description}>
+                          <Text  numberOfLines={3}  style = {styleSheet.description}>
                               Description: {item.description}
+                          </Text>
+                      </View>
+                      <View style={styleSheet.descriptionbox}>
+                          <Text  numberOfLines={3}  style = {styleSheet.description}>
+                              Contact:
+                              {"\n"} {item.contact}
                           </Text>
                       </View>
                   </View>
