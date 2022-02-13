@@ -5,13 +5,13 @@ import {styles} from "../assets/StyleSheet.js";
 import PlantsList from '../components/PlantsList';
 
 const plantData = [
-  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling"},
-  {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer"},
-  {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1"},
-  {key: '4', name: 'Carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot."},
-  {key: '5', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "2"},
-  {key: '6', name: 'Sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "3"},
-  {key: '7', name: 'Sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4"}
+  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling", contact: "+46735448218"},
+  {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer", contact: "+46735448218"},
+  {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1", contact: "+46735448218"},
+  {key: '4', name: 'Carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot.", contact: "+46735448218"},
+  {key: '5', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "2", contact: "+46735448218"},
+  {key: '6', name: 'Sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "3", contact: "+46735448218"},
+  {key: '7', name: 'Sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4", contact: "+46735448218"}
 ]
 
 const HomeScreen = ({ navigation }) => {
