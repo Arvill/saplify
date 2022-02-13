@@ -15,9 +15,9 @@ const NewItemScreen = ({ navigation }) => {
         aspect: [4, 3],
         quality: 1,
       });
-  
+
       console.log(result);
-  
+
       if (!result.cancelled) {
         setImage(result.uri);
       }
@@ -29,27 +29,27 @@ const NewItemScreen = ({ navigation }) => {
                 </Button>
                 <View>
                     <Text style={styles.gen}>Plant:</Text>
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                     />
                     <Text style={styles.gen}>Price:</Text>
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                     />
                     <Text style={styles.gen}>Phone:</Text>
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                     />
                     <Text style={styles.gen}>E-Mail:</Text>
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                     />
                     <Text style={styles.gen}>Location:</Text>
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                     />
                     <Text style={styles.gen}>Description:</Text>
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                     />
                     <Button onPress={pickImage} title="Add Picture"></Button>
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
     },
     input: {
       backgroundColor: "#FFEEE2",
-      margin: '5px'
+      margin: 5
     },
     gen: {
-        margin: '10px'
+        margin: 10
     }
   });
