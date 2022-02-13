@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
 //const Drawer = createDrawerNavigator();
 
 function HomeStackScreen() {
-  return (<View style={{ flex: 1 }}>
+  return (<View style={{ flex: 1, backgroundColor: '#9CD353', }}>
                 <Stack.Navigator initialRouteName="Home">
                 {/* <Stack.Screen name="About" component={AboutScreen} /> */}
                 <Stack.Screen name="Home"  options={{ headerShown: false }} component={HomeScreen} />

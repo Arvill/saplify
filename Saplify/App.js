@@ -14,18 +14,18 @@ function App() {
   return (
         <NavigationContainer>
           <Drawer.Navigator initialRouteName="HomeStack">
-            <Drawer.Screen name="HomeStack"
-                                          options={{
-                                                title: 'Saplify',
-                                                headerStyle: {
-                                                  backgroundColor: '#9CD353',
-                                                },
-                                                headerTintColor: '#fff',
-                                                headerTitleStyle: {
-                                                  fontWeight: 'bold',
-                                                },
-                                              }}
-                                          component={HomeStackScreen} />
+            <Drawer.Screen name="HomeStack" options={{
+                title: 'Saplify',
+                headerStyle: {
+                    backgroundColor: '#9CD353',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}
+                                          component={HomeStackScreen}>
+            </Drawer.Screen>
             <Drawer.Screen name="About"
                          component={AboutScreen}
                          /* options={{ headerTitle: () => <HomeHeader isSearching={isSearching} setIsSearching={setIsSearching}/>,
