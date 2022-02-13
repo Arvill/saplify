@@ -86,3 +86,4 @@ lint/tmp/
 
 
 node_modules
+firebase_credentials.js
