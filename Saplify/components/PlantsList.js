@@ -17,12 +17,17 @@ export default function({item, navigation}) {
                   <View style={styleSheet.textbox}>
                       <View style={styleSheet.titletbox}>
                           <Text style = {styleSheet.title}>
-                              {item.description}
+                              {item.name}
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
                           <Text style = {styleSheet.description}>
-                              {item.description}
+                              Price: {item.price}:-
+                          </Text>
+                      </View>
+                      <View style={styleSheet.descriptionbox}>
+                          <Text style = {styleSheet.description}>
+                              Description: {item.description}
                           </Text>
                       </View>
                   </View>

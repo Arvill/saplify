@@ -4,12 +4,12 @@ import { StyleSheet, TextInput, Text, View, SafeAreaView, FlatList} from 'react-
 import PlantsList from '../components/PlantsList';
 
 const plantData = [
-  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling"},
-  {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Floweeeeeeeeeeeeeeeeeeeeeeeeeeeer"},
-  {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "1"},
+  {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling from my something-plant (I have no idea, see image). Trade for any sturdy plant (they keep drying up when I leave on vacation)"},
+  {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Selling my only plant as I realised they spread 5g"},
+  {key: '3', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 20, description: "I don't want to write a description"},
   {key: '4', name: 'Carrot', imageUrl: require('../assets/images/sap1.png'), price: 12, description: "Orange carrot."},
-  {key: '5', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "2"},
-  {key: '6', name: 'Sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "3"},
+  {key: '5', name: 'Sap', imageUrl: require('../assets/images/sap3.png'), price: 15, description: "A plant cutting"},
+  {key: '6', name: 'Sap', imageUrl: require('../assets/images/sap2.png'), price: 1, description: "我是非常累"},
   {key: '7', name: 'Sap', imageUrl: require('../assets/images/sap1.png'), price: 1, description: "4"}
 ]
 
