@@ -31,8 +31,6 @@ export class Plant {
     } catch(e){
       console.error("Error adding document: ", e);
     }
-
-    this.getData();
   }
 
 
@@ -42,7 +40,7 @@ async function getData() {
   var list = [];
   console.log("Running getData()")
   const db = dbConfig();
-  var index = 1;
+  var index = 15;
   const querySnapshot= await getDocs(collection(db, "Plants"));
     querySnapshot.forEach((doc) => {
       list.push(new Plant(
