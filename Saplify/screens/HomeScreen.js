@@ -34,10 +34,12 @@ const HomeScreen = ({ navigation }) => {
             placeholder="Search for a plant"
           />
           <FlatList
+                 style={styles.homeList}
                     data={data}
                     keyExtractor={item => item.key}
                     numColumns={1}
                     key={item => item.key}
+                 ListHeaderComponent={() => <View style={{height: 70}}></View>}
                     renderItem={({item}) => PlantsList({item, navigation, text})}
                     ItemSeparatorComponent={() => <View style={{height: 10}}></View>}
           />

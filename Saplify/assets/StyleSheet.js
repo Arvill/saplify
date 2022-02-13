@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
       backgroundColor: "#4B7156",
    },
    mainContainer: {
-     padding: 16,
+     paddingHorizontal: 16,
      backgroundColor: "#4B7156",
    },
    title: {
@@ -80,9 +80,13 @@ export const styles = StyleSheet.create({
   searchInput: {
     backgroundColor: "#FFEEE2",
     borderRadius: 22,
-    paddingHorizontal: 10,
+    width: "100%",
+    paddingHorizontal: 20,
     paddingVertical: 5,
-    marginBottom: 10,
+    position: "absolute",
+    alignSelf: "center",
+    top: "2%",
+    zIndex: 100,
   },
   newItemInput: {
     backgroundColor: "#FFEEE2",
@@ -109,8 +113,10 @@ export const styles = StyleSheet.create({
     backgroundColor: "#C4C4C4",
     borderRadius: 22,
     paddingVertical: 40,
-    textAlign: "center",
     marginTop: 16,
     marginHorizontal: "30%"
+  },
+  homeList: {
+    height: "100%",
   },
   });
