@@ -24,17 +24,17 @@ export default function({item, navigation}) {
                       </View>
                       <View style={styleSheet.descriptionbox}>
                           <Text numberOfLines={2} style = {styleSheet.description}>
-                              Price: {writePrice(item.price)}
+                              <Text style={{fontWeight: "bold"}}>Price: </Text> {writePrice(item.price)}
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
                           <Text  numberOfLines={3}  style = {styleSheet.description}>
-                              Description: {item.description}
+                              <Text style={{fontWeight: "bold"}}>Description: </Text>{item.description}
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
                           <Text  numberOfLines={3}  style = {styleSheet.description}>
-                              Contact:
+                              <Text style={{fontWeight: "bold"}}>Contact:</Text>
                               {"\n"} {item.contact}
                           </Text>
                       </View>
@@ -75,6 +75,7 @@ const styleSheet = StyleSheet.create({
   title: {
       textAlign: "center",
       fontSize: 25,
+      marginBottom:10,
   },
   description: {
         textAlign: "center",

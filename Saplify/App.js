@@ -2,10 +2,12 @@ import * as React from 'react';
 import { Button, Text, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import {Image} from 'react-native';
 
 import HomeStackScreen from './screens/HomeStackScreen';
 import AboutScreen from './screens/AboutScreen';
 import NewItemScreen from './screens/NewItemScreen';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -15,7 +17,8 @@ function App() {
         <NavigationContainer>
           <Drawer.Navigator initialRouteName="HomeStack">
             <Drawer.Screen name="HomeStack" options={{
-                title: 'Saplify',
+                headerTitle: () => (<Image style = {{ height: "70%", alignSelf: "center", resizeMode: "contain", marginRight:50}} source={require('./assets/images/logo-w.png')} />),
+                title: "home",
                 headerStyle: {
                     backgroundColor: '#9CD353',
                 },
