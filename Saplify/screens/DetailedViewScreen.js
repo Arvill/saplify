@@ -16,8 +16,9 @@ const DetailedAboutScreen = ({ route, navigation }) => {
                     </Image>
                   </View>
                   <View style={styles.plantDesc}>
-                    <Text>Price: {writePrice(route.params.price)}</Text>
-                    <Text>Description: {route.params.description}</Text>
+                    <Text><Text style={{fontWeight: "bold"}}>Price: </Text>{writePrice(route.params.price)}</Text>
+                    <Text><Text style={{fontWeight: "bold"}}>Contact: </Text>{route.params.contact}</Text>
+                    <Text><Text style={{fontWeight: "bold"}}>Description: </Text>{route.params.description}</Text>
                   </View>
                   <View style={styles.invisibleBox}></View>
                   <Pressable onPress={() => navigation.navigate('Home')} style={styles.backButton}>
