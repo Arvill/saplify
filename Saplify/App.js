@@ -14,9 +14,9 @@ function App() {
   return (
         <NavigationContainer>
           <Drawer.Navigator initialRouteName="HomeStack">
-            <Drawer.Screen name="HomeStack" 
+            <Drawer.Screen name="HomeStack"
                                           options={{
-                                                title: 'Sapling',
+                                                title: 'Saplify',
                                                 headerStyle: {
                                                   backgroundColor: '#9CD353',
                                                 },
@@ -24,7 +24,7 @@ function App() {
                                                 headerTitleStyle: {
                                                   fontWeight: 'bold',
                                                 },
-                                              }} 
+                                              }}
                                           component={HomeStackScreen} />
             <Drawer.Screen name="About"
                          component={AboutScreen}
