@@ -2,11 +2,10 @@ import * as React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function({item, navigation}) {
-
     return <View key={item.key} >
               <TouchableOpacity
                   onPress={() => navigation.navigate('DetailedView',
-                  {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name, contact: item.contact})}
+                  {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name, phone: item.phone, email: item.email, location: item.location})}
                   style={styleSheet.gridbox}>
                     <View style={styleSheet.imagebox}>
 
@@ -35,7 +34,7 @@ export default function({item, navigation}) {
                       <View style={styleSheet.descriptionbox}>
                           <Text  numberOfLines={3}  style = {styleSheet.description}>
                               Contact:
-                              {"\n"} {item.contact}
+                              {"\n"} {item.phone}
                           </Text>
                       </View>
                   </View>
