@@ -28,11 +28,6 @@ const DetailedAboutScreen = ({ route, navigation }) => {
 }
 
 function writePrice(price){
-  if(typeof price == 'number'){
-    return (price + " kr")
-  }
-    else {
-      return (price)
-    }
+  return (typeof price == 'number' ? (price + " kr") : (price))
 }
 export default DetailedAboutScreen;
