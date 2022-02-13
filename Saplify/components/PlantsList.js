@@ -6,7 +6,7 @@ export default function({item, navigation}) {
     return <View key={item.key} >
               <TouchableOpacity
                   onPress={() => navigation.navigate('DetailedView',
-                  {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name, contact: item.contact})} 
+                  {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name, contact: item.contact})}
                   style={styleSheet.gridbox}>
                     <View style={styleSheet.imagebox}>
 
@@ -24,7 +24,7 @@ export default function({item, navigation}) {
                       </View>
                       <View style={styleSheet.descriptionbox}>
                           <Text numberOfLines={2} style = {styleSheet.description}>
-                              Price: {item.price}:-
+                              Price: {writePrice(item.price)}
                           </Text>
                       </View>
                       <View style={styleSheet.descriptionbox}>
@@ -41,6 +41,10 @@ export default function({item, navigation}) {
                   </View>
               </TouchableOpacity>
            </View>
+}
+
+function writePrice(price){
+  return (typeof price == 'number' ? (price + " :-") : (price))
 }
 
 const styleSheet = StyleSheet.create({
