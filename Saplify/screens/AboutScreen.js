@@ -1,30 +1,33 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button , Pressable, Linking  } from 'react-native';
+import {styles} from "../assets/StyleSheet.js";
 
 const AboutScreen = ({ navigation }) => {
         return (
-            <View>
-                <View>
-                    <Text style={styles.titleText}>About us</Text>
-                    <Text style={styles.baseText}>{"\n"}Saplify is an app to buy and sell Saplings easily. It's focus is on providing an online marketplace and letting people create offers and let buyers contact them.{"\n"}{"\n"}</Text>
-                    <Text style={styles.baseText}>Made by AppDevTeam / Group 7 as project in Developing Mobile Applications</Text>
+            <View style={styles.container}>
+                  <Text style={styles.title}>About us</Text>
+                  <View style={styles.aboutBox}>
+                    <Text style={styles.aboutDesc}>{"\n"}
+                    Saplify is an app to buy and sell Saplings easily. It's focus is on providing an online marketplace and letting people create offers and let buyers contact them.{"\n"}{"\n"}
+                    Made by Group 7 as a project in{"\ "}
+                    <Text style={{color:"blue"}} onPress={()=> Linking.openURL("https://www.kth.se/student/kurser/kurs/ID2216")}>
+                    ID2216 Developing Mobile Applications</Text>.
+
+                    {"\n"}{"\n"}
+                    Developed by:{"\n"}
+                    William Axbrink{"\n"}
+                    Tor Arvill{"\n"}
+                    Julian Vecera{"\n"}
+                    Octave Le Tullier
+                    </Text>
                     <StatusBar style="auto" />
                 </View>
-                <Button onPress={() => navigation.navigate('Home')} title="Back"></Button>
+                <View style={styles.invisibleBox}></View>
+                <Pressable onPress={() => navigation.navigate('Home')} style={styles.backButton}>
+                  <Text style={styles.textButton}>Back</Text>
+                </Pressable>
             </View>
         );
 }
-
-const styles = StyleSheet.create({
-    baseText: {
-      
-    },
-    titleText: {
-      fontSize: 20,
-      fontWeight: "bold"
-    }
-  });
-
 export default AboutScreen;
-

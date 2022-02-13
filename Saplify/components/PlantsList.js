@@ -5,7 +5,9 @@ export default function({item, navigation}) {
 
     return <View key={item.key} >
               <TouchableOpacity
-                  onPress={() => navigation.navigate('DetailedView', {price: +item.price, description: item.description, imageUrl: item.imageUrl})} style={styleSheet.gridbox}>
+                  onPress={() => navigation.navigate('DetailedView',
+                  {price: item.price, description: item.description, imageUrl: item.imageUrl, name: item.name, contact: item.contact})} 
+                  style={styleSheet.gridbox}>
                     <View style={styleSheet.imagebox}>
 
                       <Image
