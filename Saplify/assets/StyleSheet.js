@@ -19,19 +19,13 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     fontStyle: "italic",
-    borderBottomLeftRadius: 22,
-    borderBottomRightRadius: 22,
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
+    borderRadius: 22,
     textAlign: "center"
   },
   aboutBox: {
     backgroundColor: "#E6E6EF",
     alignItems: "center",
-    borderBottomLeftRadius: 22,
-    borderBottomRightRadius: 22,
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
+    borderRadius: 22,
   },
   aboutDesc: {
     backgroundColor: "#C4C4C4",
@@ -39,16 +33,10 @@ export const styles = StyleSheet.create({
     paddingBottom: 30,
     paddingTop: 10,
     width: "100%",
-    borderBottomLeftRadius: 22,
-    borderBottomRightRadius: 22,
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
+    borderRadius: 22,
   },
   backButton: {
-    borderBottomLeftRadius: 22,
-    borderBottomRightRadius: 22,
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
+    borderRadius: 22,
     backgroundColor: "#C4C4C4",
     paddingVertical: 8,
     textAlign: "center",
@@ -91,12 +79,38 @@ export const styles = StyleSheet.create({
   },
   searchInput: {
     backgroundColor: "#FFEEE2",
-    borderBottomLeftRadius: 22,
-    borderBottomRightRadius: 22,
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
+    borderRadius: 22,
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginBottom: 10,
+  },
+  newItemInput: {
+    backgroundColor: "#FFEEE2",
+    paddingHorizontal:10,
+    borderRadius: 22,
+
+  },
+  newItemHeader: {
+    marginHorizontal: 10,
+    marginVertical: 5,
+
+  },
+  newItemBox: {
+    backgroundColor: "#E6E6EF",
+    borderRadius: 22,
+    paddingHorizontal: 10,
+    paddingBottom: 30,
+    paddingTop: 10,
+  },
+  newItemAddPicture: {
+    height: 100,
+    width: "40%",
+    textAlign: "center",
+    backgroundColor: "#C4C4C4",
+    borderRadius: 22,
+    paddingVertical: 40,
+    textAlign: "center",
+    marginTop: 16,
+    marginHorizontal: "30%"
   },
   });
