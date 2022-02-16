@@ -3,10 +3,12 @@ import { Button, Text, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {Image} from 'react-native';
+import { LogBox } from 'react-native';
 
 import HomeStackScreen from './screens/HomeStackScreen';
 import AboutScreen from './screens/AboutScreen';
 import NewItemScreen from './screens/NewItemScreen';
+LogBox.ignoreLogs(['Setting a timer']);
 
 
 const Drawer = createDrawerNavigator();
