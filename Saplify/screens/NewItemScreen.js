@@ -5,8 +5,7 @@ import { Text, View, TextInput, Pressable } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import {styles} from "../assets/StyleSheet.js";
 import { Plant } from "../components/Plant.js";
-import * as Storage from "firebase/storage";
-import { dbConfig, storageConfig } from "../firebase_config.js";
+import { dbConfig } from "../firebase_config.js";
 
 const NewItemScreen = ({ navigation }) => {
     const [image, setImage] = useState(null);
@@ -29,11 +28,10 @@ const NewItemScreen = ({ navigation }) => {
       if (!result.cancelled) {
         setImage(result.uri);
       }
-
     };
 
-    async function uploadPicture(){
-      const plant = new Plant(Math.floor(Math.random()*100000), name, price, phone, email, location, description, image.uri);
+    const uploadPicture = ()=>{
+      const plant = new Plant(Math.floor(Math.random()*100000), name, price, phone, email, location, description, image);
       plant.postData();
     }
         return (
