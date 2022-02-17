@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 22,
   },
-  backButton: {
+  backButton2: {
     borderRadius: 22,
     backgroundColor: "#C4C4C4",
     paddingVertical: 8,
@@ -48,6 +48,17 @@ export const styles = StyleSheet.create({
   textButton: {
     paddingHorizontal: 15,
     textAlign: "center",
+  },
+  backButton: {
+    backgroundColor: "#FFEEE2",
+    borderRadius: 22,
+    width: "100%",
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    position: "absolute",
+    alignSelf: "center",
+    top: "95%",
+    zIndex: 100,
   },
   plantBox: {
     backgroundColor: "#E6E6EF",
@@ -66,6 +77,21 @@ export const styles = StyleSheet.create({
   plant_image: {
     resizeMode: "contain",
     height: 300
+  },
+  locationBox: {
+    backgroundColor: "#E6E6EF",
+    alignItems: "center",
+    borderBottomLeftRadius: 22,
+    borderBottomRightRadius: 22,
+  },
+  locationDesc: {
+    backgroundColor: "#C4C4C4",
+    borderTopLeftRadius: 22,
+    borderTopRightRadius: 22,
+    paddingHorizontal: 10,
+    paddingBottom: 10,
+    paddingTop: 10,
+    marginTop: 10
   },
   image: {
     width: '50vw',
