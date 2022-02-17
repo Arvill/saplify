@@ -29,12 +29,10 @@ const NewItemScreen = ({ navigation }) => {
       }
     };
 
-    const uploadPicture = ()=> {
-      const plant = new Plant("1", name, price, phone, email, location, description, image);
+    const uploadPicture = ()=>{
+      const plant = new Plant(Math.floor(Math.random()*100000), name, price, phone, email, location, description, image);
       plant.postData();
-      console.log("TODO: Create backend")
     }
-
         return (
             <View style={styles.container}>
             <Text style={styles.title}>New Plant</Text>
@@ -78,13 +76,13 @@ const NewItemScreen = ({ navigation }) => {
                     <Pressable onPress={pickImage} style={styles.newItemAddPicture}>
                       <Text style={styles.textButton}>Add Picture</Text>
                     </Pressable>
-                    <Pressable onPress={uploadPicture} style={styles.backButton}>
+                    <Pressable onPress={uploadPicture} style={styles.staticBackButton}>
                       <Text style={styles.textButton}>Submit</Text>
                     </Pressable>
                     <StatusBar style="auto" />
                 </View>
                 <View style={styles.invisibleBox}></View>
-                <Pressable onPress={() => navigation.navigate('Home')} style={styles.backButton}>
+                <Pressable onPress={() => navigation.navigate('Home')} style={styles.staticBackButton}>
                   <Text style={styles.textButton}>Back</Text>
                 </Pressable>
             </View>

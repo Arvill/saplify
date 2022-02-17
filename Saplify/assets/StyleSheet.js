@@ -35,12 +35,16 @@ export const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 22,
   },
-  backButton2: {
+  staticBackButton: {
     borderRadius: 22,
-    backgroundColor: "#C4C4C4",
-    paddingVertical: 8,
+    backgroundColor: "#FFEEE2",
     textAlign: "center",
     marginTop: 16,
+    borderRadius: 22,
+    width: "100%",
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    alignSelf: "center",
   },
   invisibleBox: {
     flex: 1,
@@ -83,6 +87,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     borderBottomLeftRadius: 22,
     borderBottomRightRadius: 22,
+    marginBottom: 100
   },
   locationDesc: {
     backgroundColor: "#C4C4C4",
