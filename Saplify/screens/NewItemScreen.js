@@ -27,24 +27,14 @@ const NewItemScreen = ({ navigation }) => {
       });
       console.log(result);
       if (!result.cancelled) {
-        setImage(result);
+        setImage(result.uri);
       }
 
     };
 
     async function uploadPicture(){
-      const plant = new Plant("1", name, price, phone, email, location, description, image.uri);
-
-      console.log(image);
-      const storage = storageConfig();
-      const ref = Storage.ref(storage);
-      console.log(ref);
-
-      const response = await fetch(image.uri);
-      const blob = await response.blob();
-      ref.put(blob);
-      //plant.postData();
-      console.log("TODO: Create backend")
+      const plant = new Plant(Math.floor(Math.random()*100000), name, price, phone, email, location, description, image.uri);
+      plant.postData();
     }
         return (
             <View style={styles.container}>
