@@ -5,7 +5,6 @@ import { Text, View, TextInput, Pressable } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import {styles} from "../assets/StyleSheet.js";
 import { Plant } from "../components/Plant.js";
-import { dbConfig } from "../firebase_config.js";
 
 const NewItemScreen = ({ navigation }) => {
     const [image, setImage] = useState(null);
