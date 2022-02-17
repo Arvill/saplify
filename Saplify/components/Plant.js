@@ -36,7 +36,7 @@ export class Plant {
 
 }
 
-async function getData() {
+export async function getData() {
   var list = [];
   console.log("Running getData()")
   const db = dbConfig();
@@ -67,5 +67,3 @@ function formatData(plantList){
   console.log(plantData);
   return plantData;
 }
-
-module.exports.getData = getData;
