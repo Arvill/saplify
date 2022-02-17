@@ -5,6 +5,8 @@ import { StyleSheet, Text, View, Image, Button, TextInput, Pressable } from 'rea
 import * as ImagePicker from 'expo-image-picker';
 import {styles} from "../assets/StyleSheet.js";
 import { Plant } from "../components/Plant.js";
+import * as Storage from "firebase/storage";
+import { dbConfig, storageConfig } from "../firebase_config.js";
 
 const NewItemScreen = ({ navigation }) => {
     const [image, setImage] = useState(null);
@@ -25,16 +27,25 @@ const NewItemScreen = ({ navigation }) => {
       });
       console.log(result);
       if (!result.cancelled) {
-        setImage(result.uri);
+        setImage(result);
       }
+
     };
 
-    const uploadPicture = ()=> {
-      const plant = new Plant("1", name, price, phone, email, location, description, image);
-      plant.postData();
+    async function uploadPicture(){
+      const plant = new Plant("1", name, price, phone, email, location, description, image.uri);
+
+      console.log(image);
+      const storage = storageConfig();
+      const ref = Storage.ref(storage);
+      console.log(ref);
+
+      const response = await fetch(image.uri);
+      const blob = await response.blob();
+      ref.put(blob);
+      //plant.postData();
       console.log("TODO: Create backend")
     }
-
         return (
             <View style={styles.container}>
             <Text style={styles.title}>New Plant</Text>
