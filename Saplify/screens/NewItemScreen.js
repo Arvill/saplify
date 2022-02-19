@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, TextInput, Pressable } from 'react-native';
+import { Text, View, TextInput, Pressable, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import {styles} from "../assets/StyleSheet.js";
 import { Plant } from "../components/Plant.js";
@@ -32,6 +32,14 @@ const NewItemScreen = ({ navigation }) => {
     const uploadPicture = ()=>{
       const plant = new Plant(Math.floor(Math.random()*100000), name, price, phone, email, location, description, image);
       plant.postData();
+      Alert.alert(
+        "Plant added",
+        "The plant was added to the entries and is visible now for all users.",
+        [
+          { text: "OK", onPress: () => console.log("OK Pressed") }
+        ]
+      );
+  
     }
         return (
             <View style={styles.container}>
