@@ -31,7 +31,6 @@ const NewItemScreen = ({ navigation }) => {
     }
   
     const pickImage = async () => {
-      requestCameraPermission();
       // No permissions request is necessary for launching the image library
       let result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.All,
@@ -73,6 +72,7 @@ const NewItemScreen = ({ navigation }) => {
       });
 
       plant.image = image.name;
+      console.log("Plant", plant);
 
       plant.postData();
       Alert.alert(
