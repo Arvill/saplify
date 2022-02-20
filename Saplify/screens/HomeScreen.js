@@ -15,6 +15,7 @@ var plantData = [
   {key: '7', name: 'Calathea "White Fusion"', imageUrl: require('../assets/images/sap1.png'), price: 45, description: "My calathea 'White Fusion' I bought 5 years ago is so big, I sell some cuttings of it :)", phone: "+46735448218", email: "waxbrink@kth.se", location: "Solna", map: require('../assets/images/map.jpg')}
 ]
   var flag = true;
+  var searchData = [];
 const HomeScreen = ({ navigation }) => {
   const [text, setText] = React.useState("");
   const [data, setData] = React.useState(plantData);
@@ -26,6 +27,7 @@ const HomeScreen = ({ navigation }) => {
     promise.then((value) => {
       setData([...data, ...value]);
     })
+    searchData = data;
   }
   return (
       <SafeAreaView>
@@ -34,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
             style={styles.searchInput}
             onChangeText={(t) => {
                                     setText(t);
-                                    setData(plantData.filter((item) => ((item.name.toLowerCase() ).includes(t.toLowerCase()))));
+                                    setData(searchData.filter((item) => ((item.name.toLowerCase() ).includes(t.toLowerCase()))))
                                   }
                           }
             value={text}
