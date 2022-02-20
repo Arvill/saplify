@@ -34,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
             style={styles.searchInput}
             onChangeText={(t) => {
                                     setText(t);
-                                    setData(plantData.filter((item) => ((item.name.toLowerCase() ).includes(t.toLowerCase()))))
+                                    setData(data.filter((item) => ((item.name.toLowerCase() ).includes(t.toLowerCase()))))
                                   }
                           }
             value={text}
