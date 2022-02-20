@@ -4,7 +4,7 @@ import {styles} from "../assets/StyleSheet.js";
 import { getData } from "../components/Plant.js";
 import PlantsList from '../components/PlantsList';
 
-const plantData = [
+var plantData = [
 
   {key: '1', name: 'Sapling', imageUrl: require('../assets/images/sap4.jpg'), price: "trade", description: "New Sapling from my something-plant (I have no idea, see image). Trade for any sturdy plant.", phone: "+46735448218", email: "waxbrink@kth.se", location: "Solna", map: require('../assets/images/map.jpg')},
   {key: '2', name: 'Flower', imageUrl: require('../assets/images/sap2.png'), price: 10, description: "Selling my only plant as I realised they spread 5g", phone: "+46735448218", email: "waxbrink@kth.se", location: "Solna", map: require('../assets/images/map.jpg')},
@@ -34,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
             style={styles.searchInput}
             onChangeText={(t) => {
                                     setText(t);
-                                    setData(plantData.filter((item) => ((item.name.toLowerCase() ).includes(t.toLowerCase()))))
+                                    setData(plantData.filter((item) => ((item.name.toLowerCase() ).includes(t.toLowerCase()))));
                                   }
                           }
             value={text}
