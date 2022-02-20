@@ -10,10 +10,11 @@ const DetailedAboutScreen = ({ route, navigation }) => {
                   {route.params.name}</Text>
                   <View style={styles.plantBox}>
                     <Image
-                        source={route.params.imageUrl}
+                        source={{uri:route.params.imageUrl}}
                         style={styles.plant_image}
                     >
                     </Image>
+                  <Text>{route.params.imageUrl}</Text>
                   </View>
                   <View style={styles.plantDesc}>
                     <Text><Text style={{fontWeight: "bold"}}>Price: </Text>{writePrice(route.params.price)}</Text>
