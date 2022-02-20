@@ -56,7 +56,7 @@ function formatData(plantList){
     plantData.push(
       { key: plant.key,
         name: plant.name,
-        imageUrl: require('../assets/images/sap4.jpg'),
+        imageUrl: plant.imageUrl,
         price: plant.price,
         description: plant.description,
         phone: plant.phone,
