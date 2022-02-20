@@ -59,6 +59,7 @@ const NewItemScreen = ({ navigation }) => {
       const plant = new Plant(Math.floor(Math.random()*100000), name, price, phone, email, location, description, image);
       console.log("Image", image.uri);
       
+      image.type = "image/jpg";
       image.name = `${makeid(64)}.jpg`;
 
       RNS3.put(image, options).then(response => {
@@ -71,7 +72,7 @@ const NewItemScreen = ({ navigation }) => {
         console.log(e);
       });
 
-      plant.image = image.name;
+      plant.imageUrl = "https://saplifykth.s3.eu-central-1.amazonaws.com/"+image.name;
       console.log("Plant", plant);
 
       plant.postData();
