@@ -10,7 +10,7 @@ export default function({item, navigation}) {
                     <View style={styleSheet.imagebox}>
 
                       <Image
-                        source={item.imageUrl}
+                        source={{uri:item.imageUrl}}
                         style={styleSheet.image}
                       >
                       </Image>
