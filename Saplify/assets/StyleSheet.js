@@ -80,7 +80,8 @@ export const styles = StyleSheet.create({
   },
   plant_image: {
     resizeMode: "contain",
-    height: 300
+    height: 300,
+    width: 300
   },
   locationBox: {
     backgroundColor: "#E6E6EF",

@@ -14,7 +14,6 @@ const DetailedAboutScreen = ({ route, navigation }) => {
                         style={styles.plant_image}
                     >
                     </Image>
-                  <Text>{route.params.imageUrl}</Text>
                   </View>
                   <View style={styles.plantDesc}>
                     <Text><Text style={{fontWeight: "bold"}}>Price: </Text>{writePrice(route.params.price)}</Text>
